@@ -15,7 +15,7 @@ class HomeConstant {
   ];
 
   static final Map<String, WidgetBuilder> route = {
-    'home': (context) => new MyHomePage(),
+    'home': (context) => new HomePage(),
     'home/tabset': (context) => new HomeTabSetPage(),
   };
 }

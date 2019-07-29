@@ -3,14 +3,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:juejinflutter/util/SpUtils.dart';
 
-import 'HomeRoute.dart';
+import '../home/HomeRoute.dart';
 
 class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     initHomeTab();
     Timer(new Duration(seconds: 3), () {
-      Navigator.of(context).popAndPushNamed('home');
+      Navigator.of(context).popAndPushNamed('main');
     });
     return Image.asset('lib/assets/splash.jpg', fit: BoxFit.fill);
   }

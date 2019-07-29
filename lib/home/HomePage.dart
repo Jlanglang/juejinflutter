@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import '../util/SpUtils.dart';
 import 'HomeRoute.dart';
 
-class MyHomePage extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
-  var _bottomIndex = 0;
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   var _spList = [];
   TabController _tabController;
 
@@ -85,45 +84,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         ],
       ),
       body: body(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
-      bottomNavigationBar: new BottomNavigationBar(
-        items: [
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: new Container(),
-          ),
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.whatshot),
-            title: new Container(),
-          ),
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            title: new Container(),
-          ),
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            title: new Container(),
-          ),
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: new Container(),
-          ),
-        ],
-        currentIndex: _bottomIndex,
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
-        onTap: (i) {
-          setState(() {
-            _bottomIndex = i;
-          });
-        },
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
