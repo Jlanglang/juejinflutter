@@ -16,7 +16,7 @@ class _MainPageState extends State<MainPage> {
     Center(child: new Text('4')),
   ];
   PageController _pageController;
-
+  
   @override
   Widget build(BuildContext context) {
     _pageController = new PageController(initialPage: _bottomIndex);

@@ -33,7 +33,7 @@ class _HomeTabSetPageState extends State<HomeTabSetPage> {
                   title: new Text(s),
                   onChanged: (b) {
                     setState(() {
-                      if (selectMenu.contains(s)&&!b) {
+                      if (selectMenu.contains(s) && !b) {
                         selectMenu.remove(s);
                       }
                       if (!selectMenu.contains(s) && b) {

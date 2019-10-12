@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController(length: _spList.length, vsync: this);
+    _tabController = TabController(length: _spList.length, vsync: this);
   }
 
   Widget body() {
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       }
       setState(() {
         _spList = HomeConstant.tabTitle.where((f) => s.contains(f)).toList();
-        _tabController = new TabController(length: _spList.length, vsync: this);
+        _tabController = TabController(length: _spList.length, vsync: this);
       });
     });
     return Scaffold(
